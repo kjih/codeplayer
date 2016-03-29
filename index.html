@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>CodePlayer</title>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/codeplayerStyle.css">
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<!-- Menu -->
+		<div id="menuBar">
+
+			<div id="logo">
+				<h3>CodePlayer<h3>
+			</div>
+
+			<div id="buttonDiv">
+				<button id="runButton">Run</button>
+			</div>
+
+			<div id="toggleBar">
+
+				<div class="toggle selected" id="htmlView" name="html">
+					<p>HTML</p>
+				</div>
+
+				<div class="toggle" id="cssView" name="css">
+					<p>CSS</p>
+				</div>
+
+				<div class="toggle" id="jsView" name="js">
+					<p>JS</p>
+				</div>
+
+				<div class="toggle selected" id="resultView" name="result" style="border-right:none">
+					<p>Result</p>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="break"></div>
+
+		<!--- Code containers -->
+		<div class="codeContainer" id="htmlContainer">
+			<div class="codeLabel"><p>HTML</p></div>
+			<textarea class="code" id="htmlCode" placeholder="HTML goes here">&lt;div id&#61;"test"&gt;hello&lt;&#47;div&gt;</textarea>
+		</div>
+
+		<div class="codeContainer" id="cssContainer">
+			<div class="codeLabel"><p>CSS</p></div>
+			<textarea class="code" id="cssCode" placeholder="CSS goes here">#test {&#13;&#9;background-color: red&#59;&#13;&#9;padding: 10px&#59;&#13;}</textarea>
+		</div>
+
+		<div class="codeContainer" id="jsContainer">
+			<div class="codeLabel"><p>JS</p></div>
+			<textarea readonly class="code" id="jsCode" placeholder="JS goes here">//This portion is disabled for security purposes&#13;&#13;document.getElementById("test").innerHTML = "New text"</textarea>
+		</div>
+
+		<div class="codeContainer" id="resultContainer">
+			<div class="codeLabel"><p>Result</p></div>
+			<iframe id="resultFrame"></iframe>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="js/codeplayerScript.js"></script>
+
+</body>
+
+</html>
